@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ThingDefs>
+
+<!-- BASES -->
+
+	<ThingDef Name="ResourceBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>75</stackLimit>
+			<statBases>
+				<Beauty>-4</Beauty>
+			</statBases>
+			<comps>
+				<li Class="CompProperties_Forbiddable"/>
+			</comps>
+			<alwaysHaulable>true</alwaysHaulable>
+			<drawGUIOverlay>true</drawGUIOverlay>
+			<rotatable>false</rotatable>
+			<pathCost>15</pathCost>
+		</ThingDef>
+		
+	<ThingDef Abstract="True" Name="OrganicProductBase" ParentName="ResourceBase">
+		<graphicData>
+		  <graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<ingestible>
+		  <preferability>DesperateOnly</preferability>
+		  <nutrition>0.05</nutrition>
+				<chairSearchRadius>60</chairSearchRadius>
+		</ingestible>
+		<socialPropernessMatters>true</socialPropernessMatters>
+		<statBases>
+		  <MaxHitPoints>100</MaxHitPoints>
+		  <Flammability>1.0</Flammability>
+		  <DeteriorationRate>10</DeteriorationRate>
+		</statBases>
+		<tickerType>Rare</tickerType>
+	  </ThingDef>
+	  
+	  <ThingDef ParentName="OrganicProductBase" Name="RoughPlantBase" Abstract="True">
+		<ingestible>
+		  <foodType>Plant</foodType>
+		  <preferability>DesperateOnly</preferability>
+		  <nutrition>0.05</nutrition>
+		</ingestible>
+	  </ThingDef>
+	  
+	  <!-- BASE RATION -->
+	  
+	  <ThingDef ParentName="RoughPlantBase">
+			<defName>BaseRation</defName>
+			<label>base ration</label>
+			<description>Base Ration, is an pre-product, made from cereals and hay that produces a paste. When processed in a Ration Tank it becomes a special ration called Pellet. It has more nutrition, and doesnt spoil.</description>
+			<stackLimit>600</stackLimit>
+			<ingestible>
+				<ingestEffect>EatVegetarian</ingestEffect>
+				<preferability>DesperateOnly</preferability>
+				<foodType>Plant</foodType>
+				<nutrition>0.15</nutrition>
+				<ingestSound>RawVegetable_Eat</ingestSound>
+			</ingestible>
+			<graphicData>
+				<texPath>Things/Item/BaseRation</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphicData>
+			<statBases>
+				<MarketValue>5</MarketValue>
+				<DeteriorationRate>.1</DeteriorationRate>
+			</statBases>
+			<tickerType>Rare</tickerType>   
+			<thingCategories>
+				<li>Animalfood</li>
+			</thingCategories>
+			<researchPrerequisites><li>Brewing</li></researchPrerequisites>
+		</ThingDef>
+		
+	<!-- PELLETS -->
+
+		<ThingDef ParentName="RoughPlantBase">
+			<defName>Pellets</defName>
+			<label>pellets</label>
+			<description>A very nutritious animal feed</description>
+			<stackLimit>600</stackLimit>
+			<ingestible>
+				<ingestEffect>EatVegetarian</ingestEffect>
+				<preferability>DesperateOnly</preferability>
+				<foodType>Plant</foodType>
+				<nutrition>0.25</nutrition>
+				<ingestSound>RawVegetable_Eat</ingestSound>
+			</ingestible>
+			<graphicData>
+				<texPath>Things/Item/Pellets</texPath>
+				<graphicClass>Graphic_Single</graphicClass>
+			</graphicData>
+			<statBases>
+				<MarketValue>5</MarketValue>
+				<DeteriorationRate>.1</DeteriorationRate>
+			</statBases>
+			<tickerType>Rare</tickerType>   
+			<thingCategories>
+				<li>Animalfood</li>
+			</thingCategories>
+			<researchPrerequisites><li>Brewing</li></researchPrerequisites>
+		</ThingDef>
+		
+</ThingDefs>

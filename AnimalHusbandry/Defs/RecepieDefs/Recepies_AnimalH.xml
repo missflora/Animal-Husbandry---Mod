@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<RecipeDefs>
+
+	<RecipeDef>
+		<defName>MakeBaseRation</defName>
+		<label>make base ration</label>
+		<description>Make base ration, that can be used with a Ration Tank to create pellets</description>
+		<jobString>Making Base Ration</jobString>
+		<workSpeedStat>BrewingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>300</workAmount>
+		<ingredients>
+			<li>
+			    <filter>
+			      <thingDefs>
+	 		        <li>Rawwheat</li>
+			        <li>RawCorn</li>
+			        <li>RawRice</li>
+			        <li>Rawoats</li>
+	     			 </thingDefs>
+	  		    </filter>
+			<count>25</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Hay</li>
+					</thingDefs>
+				</filter>
+				<count>50</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+			    <li>Rawwheat</li>
+			    <li>RawCorn</li>
+			    <li>RawRice</li>
+			    <li>Rawoats</li>
+			    <li>Hay</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<BaseRation>30</BaseRation>
+		</products>
+		<workSkill>Cooking</workSkill>
+  		<recipeUsers>
+			  <li>TableButcher</li>
+		</recipeUsers>
+    <researchPrerequisite>SK_LivestockII</researchPrerequisite>
+	</RecipeDef>
+  
+ </RecipeDefs>
