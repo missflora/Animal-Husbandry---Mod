@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<RecipeDefs>
+
+	<RecipeDef>
+		<defName>MakeAnimalRation</defName>
+		<label>make animal ration</label>
+		<description>Make animal ration using butcher´s table. It can be used with a Ration Tank to create pellets</description>
+		<jobString>Making animal Ration</jobString>
+		<workSpeedStat>BrewingSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<workAmount>300</workAmount>
+		<ingredients>
+			<li>
+			    <filter>
+			      <thingDefs>
+	 		        <li>Rawwheat</li>
+			        <li>RawCorn</li>
+			        <li>RawRice</li>
+			        <li>Rawoats</li>
+					<li>Hay</li>
+					<li>Megaspider_Meat</li>
+	     			 </thingDefs>
+	  		    </filter>
+			<count>75</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+			    <li>Rawwheat</li>
+			    <li>RawCorn</li>
+			    <li>RawRice</li>
+			    <li>Rawoats</li>
+			    <li>Hay</li>
+				<li>Megaspider_Meat</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<BaseRation>30</BaseRation>
+		</products>
+		<workSkill>Cooking</workSkill>
+  		<recipeUsers>
+			  <li>TableButcher</li>
+		</recipeUsers>
+    <researchPrerequisite>Brewing</researchPrerequisite>
+	</RecipeDef>
+  
+ </RecipeDefs>

@@ -53,9 +53,9 @@
 	  <!-- BASE RATION -->
 	  
 	  <ThingDef ParentName="RoughPlantBase">
-			<defName>BaseRation</defName>
-			<label>base ration</label>
-			<description>Base Ration, is an pre-product, made from cereals and hay that produces a paste. When processed in a Ration Tank it becomes a special ration called Pellet. It has more nutrition, and doesnt spoil.</description>
+			<defName>AnimalRation</defName>
+			<label>animal ration</label>
+			<description>Animal Ration, is an pre-product, made from cereals and hay that produces a paste. When processed in a Ration Tank it becomes a special ration called Pellet. It has more nutrition, and doesnt spoil.</description>
 			<stackLimit>600</stackLimit>
 			<ingestible>
 				<ingestEffect>EatVegetarian</ingestEffect>

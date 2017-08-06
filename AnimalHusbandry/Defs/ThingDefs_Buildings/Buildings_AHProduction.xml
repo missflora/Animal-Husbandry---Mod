@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<Buildings>
+
 	<!-- Base Worktable -->
 
 <ThingDef ParentName="BuildingBase">
@@ -46,7 +47,7 @@
 					<li>
 						<thingDef>Pellets</thingDef>
 						<ingredientFilter>
-							<thingDefs><li>BaseRation</li></thingDefs>
+							<thingDefs><li>AnimalRation</li></thingDefs>
 						</ingredientFilter>
 						<temperatureSafe>
 							<min>-10</min>
@@ -57,7 +58,7 @@
 							<max>45</max>
 						</temperatureIdeal>
 						<progressPerDegreePerTick>5</progressPerDegreePerTick>
-						<baseFermentationDuration>20000</baseFermentationDuration>
+						<baseFermentationDuration>60000</baseFermentationDuration>
 						<maxCapacity>100</maxCapacity>
 						<speedLessThanSafe>0.5</speedLessThanSafe>
 						<speedMoreThanSafe>1</speedMoreThanSafe>
@@ -65,10 +66,23 @@
 					</li>
 				</products>
 			</li>
+			<li Class="CompProperties_Glower">
+				<glowRadius>3</glowRadius>
+				<glowColor>(10,100,200,0)</glowColor>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<startElectricalFires>true</startElectricalFires>
+				<soundPowerOn>PowerOnSmall</soundPowerOn>
+				<soundPowerOff>PowerOffSmall</soundPowerOff>
+				<basePowerConsumption>30</basePowerConsumption>
+			</li>
+			<li Class="SK.CompProperties_AutoFlicker"/>    
 		</comps>
 		<researchPrerequisites>
-			<li>SK_SoilFertillizationI</li>
+			<li>Brewing</li>
 		</researchPrerequisites>
 	</ThingDef>
 	
-</ThingDefs>
+</Buildings>
